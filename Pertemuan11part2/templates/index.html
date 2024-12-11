@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #f0f4f8, #d9e8fc);
+            color: #9a8660;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f4b46b;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 10px;
+            color: #7b5524;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #021b42;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #9fb7f9;
+            text-decoration: underline;
+        }
+        form {
+            margin-top: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);   /* Soft shadow effect */
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #3a2100;
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-align: left;
+            width: 100%;
+        }
+
+        input[type="text"] {
+            padding: 10px 20px;
+            font-size: 1em;
+            font-family: 'Pacifico', sans-serif;
+            border: 2px solid #e5e7eb;
+            border-radius: 5px;
+            width: 250px;
+            margin-right: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: 600;
+            background: #efbb8b;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background: #554021;
+            transform: translateY(-2px);
+            button:active {
+            transform: translateY(1px);
+        }
+        .dark-mode {
+            background: #333;
+            color: #fff;
+        }
+        .dark-mode form {
+            background: #444;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loader Animation */
+        .loader {
+            display: none;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            margin-top: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to First Flask!</h1>
+    <a href="/about">About</a>
+    <h2>Masukkan Nama : </h2>
+    <form action="/submit" method="POST">
+        <input type="text" name="name" placeholder="Masukkan nama anda" required>
+        <input type="text" name="kelas" placeholder="Masukkan kelas anda" required> <!-- Kelas input -->
+        <input type="date" name="tanggal_lahir" placeholder="Masukkan tanggal lahir" required> <!-- Tanggal Lahir input -->
+        <button type="submit">Submit</button>
+    <form>
+
+</body>
+</html>
